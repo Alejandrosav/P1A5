@@ -1,0 +1,30 @@
+using System;
+
+class Fecha
+{
+    public int mes;
+    public int dia;
+    public int anio;
+
+    public Fecha(int m, int d, int a)
+    {
+        mes = m;
+        dia = d;
+        anio = a;
+    }
+
+    public void mostrarFecha()
+    {
+        Console.WriteLine(mes + "/" + dia + "/" + anio);
+    }
+}
+
+class FechaTest
+{
+    static void Main()
+    {
+        Fecha fecha1 = new Fecha(9, 4, 2026);
+
+        fecha1.mostrarFecha();
+    }
+}
