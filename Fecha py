@@ -1,0 +1,14 @@
+class Fecha:
+
+    def __init__(self, mes, dia, anio):
+        self.mes = mes
+        self.dia = dia
+        self.anio = anio
+
+    def mostrarFecha(self):
+        print(self.mes, "/", self.dia, "/", self.anio)
+
+
+fecha1 = Fecha(9, 4, 2026)
+
+fecha1.mostrarFecha()
