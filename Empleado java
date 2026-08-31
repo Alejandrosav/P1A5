@@ -1,0 +1,44 @@
+class Empleado {
+
+    String nombre;
+    String apellido;
+    double salario;
+
+    Empleado(String n, String a, double s) {
+        nombre = n;
+        apellido = a;
+
+        if (s > 0)
+            salario = s;
+        else
+            salario = 0.0;
+    }
+
+    double salarioAnual() {
+        return salario * 12;
+    }
+
+    void aumento() {
+        salario = salario * 1.10;
+    }
+}
+
+public class EmpleadoTest {
+
+    public static void main(String[] args) {
+
+        Empleado empleado1 = new Empleado("Juan", "Perez", 10000);
+        Empleado empleado2 = new Empleado("Maria", "Lopez", 15000);
+
+        System.out.println("Salario anual:");
+        System.out.println(empleado1.salarioAnual());
+        System.out.println(empleado2.salarioAnual());
+
+        empleado1.aumento();
+        empleado2.aumento();
+
+        System.out.println("Salario anual con aumento:");
+        System.out.println(empleado1.salarioAnual());
+        System.out.println(empleado2.salarioAnual());
+    }
+}
