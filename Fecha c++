@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class Fecha {
+
+public:
+    int mes;
+    int dia;
+    int anio;
+
+    Fecha(int m, int d, int a) {
+        mes = m;
+        dia = d;
+        anio = a;
+    }
+
+    void mostrarFecha() {
+        cout << mes << "/" << dia << "/" << anio << endl;
+    }
+};
+
+int main() {
+
+    Fecha fecha1(9, 04, 2026);
+
+    fecha1.mostrarFecha();
+
+    return 0;
+}
