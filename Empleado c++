@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+class Empleado {
+
+public:
+    string nombre;
+    string apellido;
+    double salario;
+
+    Empleado(string n, string a, double s) {
+        nombre = n;
+        apellido = a;
+
+        if (s > 0)
+            salario = s;
+        else
+            salario = 0.0;
+    }
+
+    double salarioAnual() {
+        return salario * 12;
+    }
+
+    void aumento() {
+        salario = salario * 1.10;
+    }
+};
+
+int main() {
+
+    Empleado empleado1("Juan", "Perez", 10000);
+    Empleado empleado2("Maria", "Lopez", 15000);
+
+    cout << "Salario anual:" << endl;
+    cout << empleado1.salarioAnual() << endl;
+    cout << empleado2.salarioAnual() << endl;
+
+    empleado1.aumento();
+    empleado2.aumento();
+
+    cout << "Salario anual con aumento:" << endl;
+    cout << empleado1.salarioAnual() << endl;
+    cout << empleado2.salarioAnual() << endl;
+
+    return 0;
+}
