@@ -1,0 +1,31 @@
+class Empleado:
+
+    def __init__(self, nombre, apellido, salario):
+        self.nombre = nombre
+        self.apellido = apellido
+
+        if salario > 0:
+            self.salario = salario
+        else:
+            self.salario = 0.0
+
+    def salarioAnual(self):
+        return self.salario * 12
+
+    def aumento(self):
+        self.salario = self.salario * 1.10
+
+
+empleado1 = Empleado("Juan", "Perez", 10000)
+empleado2 = Empleado("Maria", "Lopez", 15000)
+
+print("Salario anual:")
+print(empleado1.salarioAnual())
+print(empleado2.salarioAnual())
+
+empleado1.aumento()
+empleado2.aumento()
+
+print("Salario anual con aumento:")
+print(empleado1.salarioAnual())
+print(empleado2.salarioAnual())
