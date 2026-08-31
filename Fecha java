@@ -1,0 +1,26 @@
+class Fecha {
+
+    int mes;
+    int dia;
+    int anio;
+
+    Fecha(int m, int d, int a) {
+        mes = m;
+        dia = d;
+        anio = a;
+    }
+
+    void mostrarFecha() {
+        System.out.println(mes + "/" + dia + "/" + anio);
+    }
+}
+
+public class FechaTest {
+
+    public static void main(String[] args) {
+
+        Fecha fecha1 = new Fecha(9, 4, 2026);
+
+        fecha1.mostrarFecha();
+    }
+}
