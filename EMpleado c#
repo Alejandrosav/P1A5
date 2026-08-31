@@ -1,0 +1,49 @@
+using System;
+
+class Empleado
+{
+    public string nombre;
+    public string apellido;
+    public double salario;
+
+    public Empleado(string n, string a, double s)
+    {
+        nombre = n;
+        apellido = a;
+
+        if (s > 0)
+            salario = s;
+        else
+            salario = 0.0;
+    }
+
+    public double salarioAnual()
+    {
+        return salario * 12;
+    }
+
+    public void aumento()
+    {
+        salario = salario * 1.10;
+    }
+}
+
+class EmpleadoTest
+{
+    static void Main()
+    {
+        Empleado empleado1 = new Empleado("Juan", "Perez", 10000);
+        Empleado empleado2 = new Empleado("Maria", "Lopez", 15000);
+
+        Console.WriteLine("Salario anual:");
+        Console.WriteLine(empleado1.salarioAnual());
+        Console.WriteLine(empleado2.salarioAnual());
+
+        empleado1.aumento();
+        empleado2.aumento();
+
+        Console.WriteLine("Salario anual con aumento:");
+        Console.WriteLine(empleado1.salarioAnual());
+        Console.WriteLine(empleado2.salarioAnual());
+    }
+}
